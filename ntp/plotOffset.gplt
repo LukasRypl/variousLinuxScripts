@@ -1,0 +1,9 @@
+# gnuplot script
+# expects to be called with -e "offsetImage=output.png;"
+
+set terminal png
+set output offsetImage
+unset xtics
+set grid
+set yrange [*:*]
+plot 0 lt -3 notitle, offsetSource using 3 with lines title "NTP offset [ms]
